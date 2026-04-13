@@ -1,0 +1,100 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 400px;
+  height: 250px; /* Increased height slightly to accommodate the photo */
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* Updated Top Section for Alignment */
+.top-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px; /* Reduced margin to keep spacing compact */
+}
+
+/* Dog Photo Styling */
+.profile-photo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%; /* Makes the photo circular */
+  border: 3px solid white; /* Adds a clean border */
+  margin-right: 20px; /* Pushes the text away from the photo */
+  object-fit: cover; /* Ensures the photo doesn't stretch weirdly */
+}
+
+/* Name and Title Container */
+.name-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-section h2 {
+  font-size: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 300;
+  color: #cbd5e0;
+}
+
+.info-section {
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.info-item span {
+  font-weight: bold;
+  color: #63b3ed;
+  margin-right: 10px;
+}
+
+/* Decorative Circle */
+.card::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  top: -50px;
+  right: -50px;
+  z-index: 1; /* Ensures decorative circle is behind text */
+}
+
+/* Ensure content is above the decorative circle */
+.card-inner {
+  position: relative;
+  z-index: 2;
+}
